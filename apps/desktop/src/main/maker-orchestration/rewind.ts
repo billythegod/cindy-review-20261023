@@ -159,7 +159,7 @@ interface RewindContext {
   targetMessageId: string;
   targetClientId: string;
   /** 当前 agent kind；Claude checkpoint 与 conversation-tree rollback 机制不同。 */
-  agentKind: 'claude-code' | 'codex' | 'pi';
+  agentKind: 'claude-code' | 'codex' | 'pi' | 'zcode';
   /** prior assistant uuid（Claude 必填）——SDK resumeSessionAt 用。 */
   assistantUuid?: string;
   /** target user 消息的 SDK uuid——仅 preview 的 rewindFiles dryRun 用，老消息可能 NULL。 */
