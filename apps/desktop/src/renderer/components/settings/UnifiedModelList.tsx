@@ -938,7 +938,7 @@ export function UnifiedModelList({
         : explicitIcon === 'codex'
           ? 'openai'
           : explicitIcon === 'cindy'
-            ? 'xd'
+            ? 'cindy'
             : brand?.logoKind;
     const paymentRequired = isRowPaymentRequired(row);
     // 能力注记:多 agent 供应商里缺少任一通道就标(单 agent 供应商头部已说明);
@@ -970,7 +970,7 @@ export function UnifiedModelList({
             <ProviderLogoMark
               providerId={provider.id}
               routing={provider.routing}
-              {...(logoKind ? { logoKind } : {})}
+              logoKind={logoKind ?? provider.logoKind}
               size={19}
             />
           ) : (
